@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    #BOX
+\*------------------------------------*/
+
+/**
+ * Box off and pad contained content.
+ *
+ * 1. So we can apply the `.box` class to naturally-inline elements.
+ */
+.#{$namespace}box,
+%#{$namespace}box {
+    @extend %cf;
+    display: block; /* [1] */
+    padding: $base-spacing-unit;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+/**
+ * Box size variants
+ */
+.#{$namespace}box--small,
+%#{$namespace}box--small {
+    padding: halve($base-spacing-unit);
+}
+
+.#{$namespace}box--large,
+%#{$namespace}box--large {
+    padding: double($base-spacing-unit);
+}
