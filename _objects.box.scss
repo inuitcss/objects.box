@@ -2,16 +2,23 @@
     #BOX
 \*------------------------------------*/
 
+/**
+ * The box object simply boxes off content.
+ *
+ * Predefine the variables below in order to alter and enable specific features.
+ */
 $box-padding:           $base-spacing-unit !default;
 $box-padding--small:    halve($box-padding) !default;
 $box-padding--large:    double($box-padding) !default;
 
-$enable-box--small: false !default;
-$enable-box--large: false !default;
+$enable-box--small:     false !default;
+$enable-box--large:     false !default;
+
+
+
+
 
 /**
- * Box off and pad contained content.
- *
  * 1. So we can apply the `.box` class to naturally-inline elements.
  */
 .#{$namespace}box,
