@@ -2,6 +2,10 @@
     #BOX
 \*------------------------------------*/
 
+$box-padding:           $base-spacing-unit !default;
+$box-padding--small:    halve($box-padding) !default;
+$box-padding--large:    double($box-padding) !default;
+
 /**
  * Box off and pad contained content.
  *
@@ -11,7 +15,7 @@
 %#{$namespace}box {
     @extend %cf;
     display: block; /* [1] */
-    padding: $base-spacing-unit;
+    padding: $box-padding;
 
     > :last-child {
         margin-bottom: 0;
@@ -27,10 +31,10 @@
  */
 .#{$namespace}box--small,
 %#{$namespace}box--small {
-    padding: halve($base-spacing-unit);
+    padding: $box-padding--small;
 }
 
 .#{$namespace}box--large,
 %#{$namespace}box--large {
-    padding: double($base-spacing-unit);
+    padding: $box-padding--large;
 }
