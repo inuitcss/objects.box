@@ -13,7 +13,7 @@ $box-padding--large:    double($box-padding) !default;
  */
 .#{$namespace}box,
 %#{$namespace}box {
-    @extend %cf;
+    @extend %clearfix;
     display: block; /* [1] */
     padding: $box-padding;
 
