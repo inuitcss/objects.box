@@ -6,6 +6,9 @@ $box-padding:           $base-spacing-unit !default;
 $box-padding--small:    halve($box-padding) !default;
 $box-padding--large:    double($box-padding) !default;
 
+$enable-box--small: false !default;
+$enable-box--large: false !default;
+
 /**
  * Box off and pad contained content.
  *
@@ -27,14 +30,23 @@ $box-padding--large:    double($box-padding) !default;
 
 
 /**
- * Box size variants
+ * Size variants
  */
-.#{$namespace}box--small,
-%#{$namespace}box--small {
-    padding: $box-padding--small;
+
+@if ($enable-box--small == true) {
+
+    .#{$namespace}box--small,
+    %#{$namespace}box--small {
+        padding: $box-padding--small;
+    }
+
 }
 
-.#{$namespace}box--large,
-%#{$namespace}box--large {
-    padding: $box-padding--large;
+@if ($enable-box--large == true) {
+
+    .#{$namespace}box--large,
+    %#{$namespace}box--large {
+        padding: $box-padding--large;
+    }
+
 }
