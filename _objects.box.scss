@@ -7,12 +7,12 @@
  *
  * Predefine the variables below in order to alter and enable specific features.
  */
-$box-padding:           $base-spacing-unit !default;
-$box-padding--small:    halve($box-padding) !default;
-$box-padding--large:    double($box-padding) !default;
+$inuit-box-padding:         $inuit-base-spacing-unit !default;
+$inuit-box-padding--small:  halve($inuit-box-padding) !default;
+$inuit-box-padding--large:  double($inuit-box-padding) !default;
 
-$enable-box--small:     false !default;
-$enable-box--large:     false !default;
+$inuit-enable-box--small:   false !default;
+$inuit-enable-box--large:   false !default;
 
 
 
@@ -21,11 +21,11 @@ $enable-box--large:     false !default;
 /**
  * 1. So we can apply the `.box` class to naturally-inline elements.
  */
-.#{$namespace}box,
-%#{$namespace}box {
+.#{$inuit-namespace}box,
+%#{$inuit-namespace}box {
     @extend %clearfix;
     display: block; /* [1] */
-    padding: $box-padding;
+    padding: $inuit-box-padding;
 
     > :last-child {
         margin-bottom: 0;
@@ -40,20 +40,20 @@ $enable-box--large:     false !default;
  * Size variants
  */
 
-@if ($enable-box--small == true) {
+@if ($inuit-enable-box--small == true) {
 
-    .#{$namespace}box--small,
-    %#{$namespace}box--small {
-        padding: $box-padding--small;
+    .#{$inuit-namespace}box--small,
+    %#{$inuit-namespace}box--small {
+        padding: $inuit-box-padding--small;
     }
 
 }
 
-@if ($enable-box--large == true) {
+@if ($inuit-enable-box--large == true) {
 
-    .#{$namespace}box--large,
-    %#{$namespace}box--large {
-        padding: $box-padding--large;
+    .#{$inuit-namespace}box--large,
+    %#{$inuit-namespace}box--large {
+        padding: $inuit-box-padding--large;
     }
 
 }
