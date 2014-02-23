@@ -4,9 +4,9 @@
 
 /**
  * The box object simply boxes off content.
- *
- * Predefine the variables below in order to alter and enable specific features.
  */
+
+// Predefine the variables below in order to alter and enable specific features.
 $inuit-box-padding:         $inuit-base-spacing-unit !default;
 $inuit-box-padding--small:  halve($inuit-box-padding) !default;
 $inuit-box-padding--large:  double($inuit-box-padding) !default;
@@ -30,17 +30,18 @@ $inuit-enable-box--large:   false !default;
     > :last-child {
         margin-bottom: 0;
     }
+
 }
 
 
 
 
 
-/**
- * Size variants
- */
-
 @if ($inuit-enable-box--small == true) {
+
+    /**
+     * Small box.
+     */
 
     .#{$inuit-namespace}box--small,
     %#{$inuit-namespace}box--small {
@@ -50,6 +51,10 @@ $inuit-enable-box--large:   false !default;
 }
 
 @if ($inuit-enable-box--large == true) {
+
+    /**
+     * Large box.
+     */
 
     .#{$inuit-namespace}box--large,
     %#{$inuit-namespace}box--large {
