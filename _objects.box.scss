@@ -11,6 +11,7 @@ $inuit-box-padding:         $inuit-base-spacing-unit !default;
 $inuit-box-padding--small:  halve($inuit-box-padding) !default;
 $inuit-box-padding--large:  double($inuit-box-padding) !default;
 
+$inuit-enable-box--flush:   false !default;
 $inuit-enable-box--small:   false !default;
 $inuit-enable-box--large:   false !default;
 
@@ -36,6 +37,19 @@ $inuit-enable-box--large:   false !default;
 
 
 
+
+@if ($inuit-enable-box--flush == true) {
+
+    /**
+     * Flush (i.e. no padding) box.
+     */
+
+    .#{$inuit-namespace}box--flush,
+    %#{$inuit-namespace}box--flush {
+        padding: 0;
+    }
+
+}
 
 @if ($inuit-enable-box--small == true) {
 
