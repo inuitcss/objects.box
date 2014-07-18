@@ -7,8 +7,10 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
+$inuit-box-namespace:       $inuit-namespace !default;
+
 $inuit-box-padding:         $inuit-base-spacing-unit !default;
-$inuit-box-padding--small:  halve($inuit-box-padding) !default;
+$inuit-box-padding--small:   halve($inuit-box-padding) !default;
 $inuit-box-padding--large:  double($inuit-box-padding) !default;
 
 $inuit-enable-box--flush:   false !default;
@@ -22,8 +24,8 @@ $inuit-enable-box--large:   false !default;
 /**
  * 1. So we can apply the `.box` class to naturally-inline elements.
  */
-.#{$inuit-namespace}box,
-%#{$inuit-namespace}box {
+.#{$inuit-box-namespace}box,
+%#{$inuit-box-namespace}box {
     @extend %clearfix;
     display: block; /* [1] */
     padding: $inuit-box-padding;
@@ -44,8 +46,8 @@ $inuit-enable-box--large:   false !default;
      * Flush (i.e. no padding) box.
      */
 
-    .#{$inuit-namespace}box--flush,
-    %#{$inuit-namespace}box--flush {
+    .#{$inuit-box-namespace}box--flush,
+    %#{$inuit-box-namespace}box--flush {
         padding: 0;
     }
 
@@ -57,8 +59,8 @@ $inuit-enable-box--large:   false !default;
      * Small box.
      */
 
-    .#{$inuit-namespace}box--small,
-    %#{$inuit-namespace}box--small {
+    .#{$inuit-box-namespace}box--small,
+    %#{$inuit-box-namespace}box--small {
         padding: $inuit-box-padding--small;
     }
 
@@ -70,8 +72,8 @@ $inuit-enable-box--large:   false !default;
      * Large box.
      */
 
-    .#{$inuit-namespace}box--large,
-    %#{$inuit-namespace}box--large {
+    .#{$inuit-box-namespace}box--large,
+    %#{$inuit-box-namespace}box--large {
         padding: $inuit-box-padding--large;
     }
 
