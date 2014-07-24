@@ -10,12 +10,15 @@
 $inuit-box-namespace:       $inuit-namespace !default;
 
 $inuit-box-padding:         $inuit-base-spacing-unit !default;
-$inuit-box-padding--small:   halve($inuit-box-padding) !default;
-$inuit-box-padding--large:  double($inuit-box-padding) !default;
+$inuit-box-padding--tiny:     quarter($inuit-box-padding) !default;
+$inuit-box-padding--small:      halve($inuit-box-padding) !default;
+$inuit-box-padding--large:     double($inuit-box-padding) !default;
+$inuit-box-padding--huge:   quadruple($inuit-box-padding) !default;
 
 $inuit-enable-box--flush:   false !default;
+$inuit-enable-box--tiny:    false !default;
 $inuit-enable-box--small:   false !default;
-$inuit-enable-box--large:   false !default;
+$inuit-enable-box--huge:    false !default;
 
 
 
@@ -53,6 +56,19 @@ $inuit-enable-box--large:   false !default;
 
 }
 
+@if ($inuit-enable-box--tiny == true) {
+
+    /**
+     * Tiny box.
+     */
+
+    .#{$inuit-box-namespace}box--tiny,
+    %#{$inuit-box-namespace}box--tiny {
+        padding: $inuit-box-padding--tiny;
+    }
+
+}
+
 @if ($inuit-enable-box--small == true) {
 
     /**
@@ -75,6 +91,19 @@ $inuit-enable-box--large:   false !default;
     .#{$inuit-box-namespace}box--large,
     %#{$inuit-box-namespace}box--large {
         padding: $inuit-box-padding--large;
+    }
+
+}
+
+@if ($inuit-enable-box--huge == true) {
+
+    /**
+     * Huge box.
+     */
+
+    .#{$inuit-box-namespace}box--huge,
+    %#{$inuit-box-namespace}box--huge {
+        padding: $inuit-box-padding--huge;
     }
 
 }
