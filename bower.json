@@ -6,7 +6,7 @@
     "Harry Roberts <harry@csswizardry.com>"
   ],
   "description": "Basic box object for the inuitcss framework",
-  "main": "_base.tables.scss",
+  "main": "_objects.box.scss",
   "keywords": [
     "inuitcss",
     "oocss",
