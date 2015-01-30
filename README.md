@@ -23,6 +23,10 @@ module via a Git Submodule, or copy and paste.
 
     $ bower install --save inuit-box
 
+Install using npm:
+
+    $ npm install --save inuit-box
+
 Once installed, `@import` into your project in its Objects layer:
 
     @import "bower_components/inuit-box/objects.box";
